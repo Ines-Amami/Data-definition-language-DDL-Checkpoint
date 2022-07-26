@@ -9,7 +9,7 @@ CREATE TABLE Product (
     Product_Name VARCHAR2(20)CONSTRAINT nm_product NOT NULL, 
     Price NUMBER CONSTRAINT n_product CHECK (Price > 0)
     );
-CREATE TABLE orders( 
+CREATE TABLE Orders( 
   customer_id VARCHAR2(20),
   product_id VARCHAR2(20),
   quantity NUMBER,
@@ -25,4 +25,4 @@ ALTER TABLE Product ADD category VARCHAR2(20);
 
 /*Add a column OrderDate (DATE)  to the ORDERS table which have SYSDATE as a default value.*/
 
-ALTER TABLE orders ADD order_date  Date DEFAULT SYSDATE;
+ALTER TABLE Orders ADD order_date  Date DEFAULT SYSDATE;
